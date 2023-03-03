@@ -1,11 +1,14 @@
-import mysql.connector
+#crea database mysql
 
-mydb = mysql.connector.connect(
-  host="localhost",
+import mysql.connector  #importando la libreria
+
+mydb = mysql.connector.connect(      # mydb serve ad interagirecol db 
+  host="localhost",              #indirizzo dove sta il db
   user="root",
   password=""
 )
 
-mycursor = mydb.cursor()
+mycursor = mydb.cursor()  #funzione che serve per i comandi a mysql in linguaggio sql
 
 mycursor.execute("CREATE DATABASE mydatabase")
+
